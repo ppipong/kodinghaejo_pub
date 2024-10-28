@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/* import local scss Files */
+@import "reset.css";
+@import "fonts.css";
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333333;
+}
+body {
+  font-weight: 300;
+  margin: 0;
+  font-size: 15px;
+}
+/* toolkit */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+.mt20 { margin-top: 20px !important;}
+
+/* 공통 : content > box */
+.container > div[class*="content"] {
+  margin: 0 auto;
+  padding: 0px 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+/* default-btn-set */
+a[calss*="btn"],
+button 
+{
+  border: 1px solid #ced4da;
+  background: #fff;
+  color: #212529;;
+  padding: 8px 12px;
+  display: block;
+  min-width: 90px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+a[calss*="btn"]:hover,
+button:hover 
+{
+  background-color: #F8F9FA;
+  font-weight: 500;
+}
+
+/* ********* challenge : 코딩테스트 부분 **********/
+.challenge-navbar .navbar-breadcrumb { 
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding-left: 10px;
+  background: #000;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.challenge-navbar .navbar-breadcrumb .active {
+  font-weight: bold;
+}
+.challenge-navbar .navbar-breadcrumb li.active::after {
+  content: "";
+}
+.challenge-navbar .navbar-breadcrumb li {
+  color: #fff;
+}
+.challenge-navbar .navbar-breadcrumb li::marker {
+  content: "";
+}
+.challenge-navbar .navbar-breadcrumb li::after {
+  margin-left: 10px;
+  content: ">";
+}
+.wrap .challenge-content .challenge-nav {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #737373;
+  align-items: center;
+}
+.challenge-nav .nav-item {}
+.challenge-nav .nav-item i.xi-bookmark-o,
+.challenge-nav .nav-item i.xi-bookmark { 
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.challenge-nav .nav-item i.xi-bookmark-o::before,
+.challenge-nav .nav-item i.xi-bookmark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+} 
+.challenge-nav .nav-item .challenge-title {
+  margin-left: 10px;
+  font-weight: 500;
+}
+.challenge-nav .nav-item .dropdown-language .dropdown-menu .dropdown-item {
+  display: inline-block;
+  border: 1px solid #737373;
+  background: #fff;
+  padding: 5px 10px;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.challenge-nav .nav-item .dropdown-language .dropdown-menu .dropdown-item:hover {
+  background: #d0e1ff;
+  color: #44576c;
+  transition: .4s all;
+}
+/* challenge-content : background-color-validation */
+.wrap .challenge-content .challenge-content-list {
+  min-height: 45rem;
+  padding: 10px 20px;
+  display: flex;
+  background-color: #263747;
+}
+.wrap .challenge-content .challenge-content-list .challenge-content-question {
+  max-width: 40%;
+  border-right: 1px dashed #fff;
+  padding-right: 20px;
+}
+.wrap .challenge-content .challenge-content-list .challenge-content-run {
+  min-width: 60%;
+  padding-left: 20px;
+}
+.wrap .challenge-content .challenge-content-list .challenge-content-question .guide-section-title
+, .wrap .challenge-content .challenge-content-list .challenge-content-run .guide-section-title {
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #fff;
+}
+.wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section code {
+  background-color: #202B3D;
+  color: #CDD7E0;
+  padding: 2px 5px;
+  border: 1px solid #172334;
+  margin: 0 2px;
+  border-radius: .3rem;
+}
+/* challenge-content : font-color-validation */
+.wrap .challenge-content .challenge-content-list .challenge-content-question .guide-section-title
+, .wrap .challenge-content .challenge-content-list .challenge-content-run .guide-section-title
+, .wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section
+, .wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section p
+, .wrap .challenge-content .challenge-content-list .challenge-content-run p 
+, .wrap .challenge-content .challenge-content-list .challenge-content-run .resultArea
+{
+  color: #fff;
+}
+.challenge-content-run .editor textarea {
+  width: inherit;
+  height: inherit;
+  resize: none;
+  outline: none;
+  border: none;
+  background: inherit;
+  color: #fff;
+}
+/* bottom-list */
+.wrap .challenge-content .bottom-list {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .challenge-content .bottom-list .testcase-button
+, .wrap .challenge-content .bottom-list .func-buttons .btn_check 
+, .wrap .challenge-content .bottom-list .func-buttons .btn_forward 
+, .wrap .challenge-content .bottom-list .func-buttons .btn_login 
+{
+  background: #263747;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.wrap .challenge-content .bottom-list .testcase-button:hover
+, .wrap .challenge-content .bottom-list .func-buttons .btn_check:hover 
+, .wrap .challenge-content .bottom-list .func-buttons .btn_forward:hover 
+, .wrap .challenge-content .bottom-list .func-buttons .btn_login:hover 
+ {
+  border-color: #37485D;
+  background-color: #37485D;
+  color: white;
+  transition: .4s all;
+}
+
+/************************ main *************************/
+header {
+  border-bottom: 1px solid #E7E7E7;
+  background-color: #FFFFFF;
+}
+.main-navbar {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  justify-content: space-between;
+}
+.main-navbar .main-navbar-list { 
+  height: 50px;
+  margin: 0;
+  display: flex;
+}
+.main-navbar .main-navbar-list .main-list-item {
+  padding-left: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main-navbar .main-navbar-list .main-list-item li.active::after {
+  content: "";
+}
+.main-navbar .main-navbar-list .main-list-item li {
+  color: #000;
+}
+.main-navbar .main-navbar-list .main-list-item li::marker {
+  content: "";
+}
+.main-navbar .main-navbar-list .main-list-item li::after {
+  margin-left: 10px;
+}
+.main-navbar .main-navbar-list .main-list-item.login {
+  font-size: 12px;
+  align-items: center;
+}
+.main-navbar .main-navbar-list .main-list-item li a:hover {
+  font-weight: 400;
+}
+/* main : banner */
+.container .main-banner {
+  background: #100B12;
+}
+.container .main-banner .main-banner-item {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .main-banner .main-banner-text {
+  /* border: 1px solid tomato; */
+  padding: 0 25px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .main-banner .main-banner-text p {
+  margin: 0;
+  font-size: 1.2em;
+  animation: fadeInDown .5s;
+}
+.container .main-banner .main-banner-text p
+, .container .main-banner .main-banner-text p strong {
+  color: #fff;
+}
+.container .main-banner .main-banner-text button {
+  margin-top: 20px;
+  animation: fadeInDown 1s;
+}
+.container .main-banner .banner-img img {
+  width: auto;
+  height: 300px;
+}
+/* main-content */
+.main-content .content-box {}
+.main-content .content-box .box-item {}
+.main-content .content-box .box-item h3 {
+  font-size: 20px;
+}
+.main-content .content-box .box-item .item-quick {
+  padding-top: 45px;
+  text-align: center;
+}
+.main-content .content-box .box-item .item-quick .quick-box {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 30px;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list {
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f3f3;
+  cursor: pointer;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list i {
+  font-size: 30px;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list i:hover {
+  transition: .4s all;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list:nth-child(1) i:hover {
+  color: gold;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list:nth-child(2) i:hover {
+  color: crimson;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list:nth-child(3) i:hover {
+  color: slateblue;
+}
+.main-content .content-box .box-item .item-quick .quick-box .quick-box-list p {
+  margin: 15px 4px auto;
+}
+.main-content .content-box .box-item .item-card {
+  padding-top: 80px;
+}
+.main-content .content-box .box-item .item-card .card-ui-box {
+  
+}
+
+/* animation kit */
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+  }
+  100% {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
