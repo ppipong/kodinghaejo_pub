@@ -27,6 +27,11 @@
       <ul class="main-list-item login">
         <li><a href="/" class="btn_login">로그인</a></li>
         <li><a href="/" class="btn_sign">회원가입</a></li>
+        <li style="text-align: center;">
+          <span><img src="img/test-profile/handyping.png" alt="" style="width: 30px; height: 30px;"><b>{조아핑}</b>님이 로그인 하셨습니다</span>
+        </li>
+        <li><a href="/" class="btn_login">로그아웃</a></li>
+        <li><a href="/" class="btn_sign">MyPage</a></li>
       </ul>
     </div>
   </nav>
@@ -47,7 +52,6 @@
     </div>
     <!-- main-content -->
     <div class="main-content">
-
       <div class="content-box">
         <div class="box-item">
           <div class="item-quick">
@@ -70,22 +74,71 @@
         </div>
       </div>
 
-      <!-- <p>컨텐츠 영역입니다</p> -->
-      
       <div class="content-box">
         <div class="box-item">
           <div class="item-card">
             <h3>분야별 문제 보기</h3>
             <div class="card-ui-box">
-              <img src="" alt="">
-              <span>작은태그</span>
-              <p>가나다라</p>
+              <div class="card-ui-list" onclick="location.href='/'">
+                <img src="/img/card-test.jpg" alt="">
+                <p class="card-ui-box-title">작은문제 하나둘셋</p>
+                <div class="bage-group">
+                  <!-- 샘플 tag -->
+                  <span class="card-small-red-tag">태그릿</span>
+                  <span class="card-small-yellow-tag">태그릿</span>
+                  <span class="card-small-green-tag">태그릿</span>
+                  <span class="card-small-blue-tag">태그릿</span>
+                </div>
+                <hr>
+                <p class="card-ui-box-rank">난이도 <b>{1레벨}</b></p>
+              </div>
+              <!-- 카드 UI 총 수량 3개 까지만 허용 -->
+              <!-- item : card-ui-list -->
             </div>
           </div>
         </div>
       </div>
+
+      <div class="content-box">
+        <div class="box-item">
+          <div class="item-middle-card">
+            <h3>이용자 랭킹 순위 보기</h3>
+            <div class="item-middle-ui-card-box">
+
+              <div class="card-middle-ui-list"  onclick="location.href='/'">
+                <img src="/img/test-profile/coolping.png" alt="profile">
+                <div class="card-item">
+                  <div class="card-profile">
+                    <p class="profile-name">회원 아무개씨</p>
+                    <p class="profile-rank">플래티넘</p>
+                  </div>
+                  <div class="card-rank-area">
+                    <span>많이 푼 언어<b>{java}</b></span>
+                    <span>정답율 <b>{0%}</b></span>
+                  </div>
+                </div>
+              </div>
+              <!-- 카드 UI 총 수량 3개 까지만 허용 -->
+              <!-- card-middle-ui-list -->
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-      
+
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>주소 : 서울특별시 강서구 화곡로 179 대한상공회의소 서울기술교육센터</p>
+      <p>전화 : 02)311-1000</p>
+      <p>팩스 : 02)2697-9700</p>
+      <p>대표자명 : 방구석 지킴이들</p>
+    </div>
+    <div class="footer-sub">
+      <p class="copy">ⓒ 2024 All Rights Reserved. 방구석 지킴이 </p>
+    </div>
+  </footer>
 </body>
 </html>
