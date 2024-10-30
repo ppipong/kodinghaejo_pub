@@ -266,8 +266,52 @@ header {
   font-size: 12px;
   align-items: center;
 }
+.main-navbar .main-navbar-list .main-list-item.login .login_profile {
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
 .main-navbar .main-navbar-list .main-list-item li a:hover {
   font-weight: 400;
+}
+/* 기본 default 값이 숨김 처리 */
+.main-nav-list-menu {
+  display: none;
+}
+.main-nav-list-menu.active {
+  display: block;
+  position: absolute;
+  top: 51px;
+  width: 100%;
+  background: #fff;
+}
+.main-nav-list-menu .main-nav-list-menu-item {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 225px;
+  flex-basis: 1em;
+}
+.main-nav-list-menu .main-nav-list-menu-item .menu-item {
+  flex-basis: 150px;
+}
+.main-nav-list-menu .main-nav-list-menu-item ul {
+  list-style: none;
+  padding-left: 0;
+
+}
+.main-nav-list-menu .main-nav-list-menu-item ul li {
+  padding: 8px 0;
+  margin: 0;
+}
+.main-nav-list-menu .main-nav-list-menu-item ul li a:hover {
+  font-weight: 400;
+}  
+.main-nav-list-menu .main-nav-list-menu-item ul li b {
+  color: seagreen;
+}
+.main-nav-list-menu .main-nav-list-menu-item .menu-item {
+  padding: 0 5px;
 }
 /************************ footer *************************/
 footer {
@@ -286,7 +330,6 @@ footer .footer-content p
   font-size: 12px;
   color: #fff;
 }
-
 /************************ main *************************/
 /* main : banner */
 .container .main-banner {
