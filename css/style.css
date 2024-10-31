@@ -282,13 +282,15 @@ header {
 /* 기본 default 값이 숨김 처리 */
 .main-nav-list-menu {
   display: none;
+  transition: all 0.2s;
 }
 .main-nav-list-menu.active {
   display: block;
   position: absolute;
-  top: 51px;
+  top: 50px;
   width: 100%;
   background: #fff;
+  animation: fadeIn .3s ease-in-out;
 }
 .main-nav-list-menu .main-nav-list-menu-item {
   display: flex;
@@ -515,6 +517,9 @@ footer .footer-content p
   padding: 0 2px ;
 }
 /* ********* notice-list-board ********* */
+.content-board-notice {
+  margin-top: 20px;
+}
 .content-board-notice h2 {
   background: #252525;
   color: #fff;
@@ -555,7 +560,7 @@ footer .footer-content p
 
 /* ********* free-board ********* */
 .content-board-free .content-board-free-content {
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
   padding: 20px 0;
 }
 .content-board-free .content-board-free-title {
@@ -575,42 +580,53 @@ footer .footer-content p
 }
 .content-board-free .content-board-free-content .free-content-box {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .content-board-free .content-board-free-content .free-content-box .content-box-item {
-  /* width: 200px; */
-  /* height: 200px; */
+  flex-basis: 30%;
   padding: 10px;
-  background: tomato;
+  background: #FFC8C1;
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 10px;
+  border: 1px solid transparent;
 }
-.content-board-free .content-board-free-content .free-content-box .content-box-item h4
-, .content-board-free .content-board-free-content .free-content-box .content-box-item h5 
-, .content-board-free .content-board-free-content .free-content-box .content-box-item p
-{
-  color: #fff;
+.content-board-free .content-board-free-content .free-content-box .content-box-item:hover {
+  border: 1px solid #FE7565; 
+}
+.content-board-free .content-board-free-content .free-content-box .content-box-item:nth-child(odd) {
+  background: #D2DCFE;
+}
+.content-board-free .content-board-free-content .free-content-box .content-box-item:nth-child(odd):hover {
+  border: 1px solid #4971FD;
 }
 .content-board-free .content-board-free-content .free-content-box .content-box-item h5 {
   font-size: 14px;
 }
-.content-board-free .content-board-free-content .free-content-box .content-box-item p {
-  margin: 0;
-}
 .content-board-free .content-board-free-content .free-content-box .content-box-item h4 {
   font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #0B1F65;
 }
-/* .content-board-free .content-board-free-content .free-content-box .content-box-item h5 
+.content-board-free .content-board-free-content .free-content-box .content-box-item:nth-child(even) h4 {
+  color: #893228;
+}
+.content-board-free .content-board-free-content .free-content-box .content-box-item h5 
 , .content-board-free .content-board-free-content .free-content-box .content-box-item p
 {
-  width: 180px;
   text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical
-} */
+}
+.content-board-free .content-board-free-content .free-content-box .content-box-item .content-title {
+  margin: 5px 0;
+  font-size: 14px;
+}
 .content-box-item .profile-title {
   margin-top: 10px;
   font-size: 13px;
@@ -620,21 +636,32 @@ footer .footer-content p
   padding: 0;
   background: silver;
 }
+.content-box-item .profile-title .profile-name {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.content-box-item .profile-title .profile-date {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
 .content-box-item .profile-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px 0 0 0;
 }
 .content-box-item .profile-item ol {
   list-style: none;
   padding-left : 0;
   display: flex;
   gap: 5px;
+  margin: 0;
 }
 .content-box-item .profile-item ol li i {
   padding: 0 5px 0 0;
 }
-
 
 /* animation kit */
 @keyframes fadeInDown {
@@ -645,6 +672,14 @@ footer .footer-content p
   100% {
       opacity: 1;
       transform: translateZ(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
 .rotate-vert-center {
