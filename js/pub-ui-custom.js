@@ -1,5 +1,21 @@
 /* pub-js */
-document.addEventListener('DOMContentLoaded', function() {
+fetch("/include/header.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("#header").innerHTML = data;
+  });
+
+fetch("/include/footer.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("#footer").innerHTML = data;
+  });
+
+window.onload = () => {
   if (document.querySelector('.main-navbar')) {
     document.addEventListener('mouseover', function(event) {
       if (event.target.closest('.main-list-item .nav-hover') || event.target.closest('.main-nav-list-menu')) {
@@ -9,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
+}
 
 document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
