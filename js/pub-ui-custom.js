@@ -16,19 +16,42 @@ fetch("/include/footer.html")
     document.querySelector("#footer").innerHTML = data;
   });
 
-  window.onload = () => {
-    if (document.querySelector('.main-navbar')) {
-      document.addEventListener('mouseover', function(event) {
-        if (event.target.closest('.main-list-item .nav-hover') || event.target.closest('.main-nav-list-menu')) {
-          document.querySelector('.main-nav-list-menu').classList.add('active');
-          document.querySelector('.main-nav-list-menu').style.zIndex = 1000;
-        } else if (!event.target.closest('.main-navbar')) {
-          document.querySelector('.main-nav-list-menu').classList.remove('active');
-          document.querySelector('.main-nav-list-menu').style.zIndex = 0;
-        }
-      });
-    }
+window.onload = () => {
+
+  if (document.querySelector('.main-navbar')) {
+    document.addEventListener('mouseover', function(event) {
+      if (event.target.closest('.main-list-item .nav-hover') || event.target.closest('.main-nav-list-menu')) {
+        document.querySelector('.main-nav-list-menu').classList.add('active');
+        document.querySelector('.main-nav-list-menu').style.zIndex = 1000;
+      } else if (!event.target.closest('.main-navbar')) {
+        document.querySelector('.main-nav-list-menu').classList.remove('active');
+        document.querySelector('.main-nav-list-menu').style.zIndex = 0;
+      }
+    });
   }
+    
+  // 이원화
+let modalBackground = document.querySelector('.modal-background');
+    
+const loginView = (e) => {
+  if (e === 'open') {
+    document.body.style.cssText = 'position: fixed; top: -${ window.scrollY }px; overflow-y: scroll; width: 100%;';
+    modalBackground.style.display = 'block';
+  }
+  
+  if (e === 'close') {
+    email.value = '';
+    password.value = '';
+    document.body.style.cssText = '';
+    window.scrollTo(0, parseInt(document.body.style.top || '0', 10) * -1);
+    modalBackground.style.display = 'none';
+  }
+}
+
+const loginChk  = () => {
+  
+}
+}
 
 document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
@@ -50,4 +73,5 @@ document.addEventListener('click', function(event) {
     event.target.classList.toggle("xi-heart");
   }
 });
+  
 
