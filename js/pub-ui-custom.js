@@ -30,48 +30,52 @@ window.onload = () => {
     });
   }
     
-  // 이원화
-let modalBackground = document.querySelector('.modal-background');
+  // 분석
+  let modalBackground = document.querySelector('.modal-background');
+  console.log(modalBackground);
+  const loginView = (e) => {
+    if (e == 'open') {
+      document.body.style.cssText = `position: fixed; top: -${window.scrollY}px; overflow-y: scroll; width: 100%;`;
+      modalBackground.style.display = 'block';
+    }
     
-const loginView = (e) => {
-  if (e === 'open') {
-    document.body.style.cssText = 'position: fixed; top: -${ window.scrollY }px; overflow-y: scroll; width: 100%;';
-    modalBackground.style.display = 'block';
+    if (e == 'close') {
+      email.value = '';
+      password.value = '';
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(document.body.style.top || '0', 10) * -1);
+      modalBackground.style.display = 'none';
+    }
   }
+
+  const loginChk  = () => {}
   
-  if (e === 'close') {
-    email.value = '';
-    password.value = '';
-    document.body.style.cssText = '';
-    window.scrollTo(0, parseInt(document.body.style.top || '0', 10) * -1);
-    modalBackground.style.display = 'none';
-  }
-}
 
-const loginChk  = () => {
+  document.addEventListener('click', function(event) {
+    if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
+      event.target.classList.toggle("xi-bookmark-o");
+      event.target.classList.toggle("xi-bookmark");
+    }
+  });
   
+  document.addEventListener('click', function(event) {
+    if (event.target.matches('.xi-heart-o') || event.target.matches('.xi-heart')) {
+      event.target.classList.toggle("xi-heart-o");
+      event.target.classList.toggle("xi-heart");
+    }
+  });
+  
+  document.addEventListener('click', function(event) {
+    if (event.target.matches('.xi-heart-o') || event.target.matches('.xi-heart')) {
+      event.target.classList.toggle("xi-heart-o");
+      event.target.classList.toggle("xi-heart");
+    }
+  });
+
+
+
 }
-}
 
-document.addEventListener('click', function(event) {
-  if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
-    event.target.classList.toggle("xi-bookmark-o");
-    event.target.classList.toggle("xi-bookmark");
-  }
-});
 
-document.addEventListener('click', function(event) {
-  if (event.target.matches('.xi-heart-o') || event.target.matches('.xi-heart')) {
-    event.target.classList.toggle("xi-heart-o");
-    event.target.classList.toggle("xi-heart");
-  }
-});
-
-document.addEventListener('click', function(event) {
-  if (event.target.matches('.xi-heart-o') || event.target.matches('.xi-heart')) {
-    event.target.classList.toggle("xi-heart-o");
-    event.target.classList.toggle("xi-heart");
-  }
-});
   
 
