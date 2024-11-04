@@ -240,6 +240,7 @@ select:focus{
 .toastui-editor-tooltip .text {
   color: #fff;
 }
+.toastui-editor-mode-switch { display: none !important; }
 /* ********* challenge : 코딩테스트 부분 **********/
 .challenge-navbar .navbar-breadcrumb { 
   width: 100%;
@@ -476,10 +477,13 @@ header {
   padding: 0 5px;
 }
 /************************ footer *************************/
+#footer {
+  margin-top: 100px;
+}
 footer {
   background: #000;
   height: 220px;
-  margin-top: 100px;
+  
 }
 footer .footer-content {
   padding: 50px 0;
@@ -832,6 +836,146 @@ div[class*="-form"] {
 }
 .content-box-item .profile-item ol li i {
   padding: 0 5px 0 0;
+}
+/* ********* free-board-view ********* */
+.content-board-free-view .content-board-free-view-wrap {
+  margin: 80px auto;
+
+}
+.content-board-free-view .content-board-free-view-wrap h4 {
+  background: #D2DCFE;
+  color: #0B1F65;
+  display: inline-block;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.content-board-free-view .content-board-free-view-wrap h5 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.content-board-free-view .content-board-free-view-wrap p {
+  line-height: 155%;
+}
+.content-board-free-view .profile-title {
+  /* background: tomato; */
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 25px;
+}
+.content-board-free-view .profile-title img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+  /* border: 1px solid #000; */
+  border-radius: 999px;
+}
+.content-board-free-view .profile-title .profile-date {
+  color: #777777;
+}
+.content-board-free-view .profile-title .profile-title-content p {
+  margin: 0;
+}
+.free-review-list .free-review-list-title {}
+.free-review-list .free-review-list-title .profile-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #777;
+}
+.free-review-list .free-review-list-title .profile-title .profile-title-content {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+.free-review-list .free-review-list-title .profile-title .profile-title-content img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 999px;
+}
+.free-review-list .free-review-list-title .profile-title .profile-title-content .profile-date {
+  color: #777;
+}
+.free-review-list .free-review-list-title .profile-title .profile-title-content p {
+  margin: 0 4px;
+}
+.free-review-list .free-review-list-title ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.free-review-list .free-review-list-title ol li {
+  display: inline;
+}
+.free-review-list .free-review-list-content {}
+.free-review-list .free-review-list-content p {
+  line-height: 155%;
+}
+.free-review-list .free-review-list-content .user-free-board-tab {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.free-review-list .free-review-list-content .btn_eidt {
+  background: #969aa5;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+}
+.content-board-free-view .profile-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
+  padding: 15px 0;
+}
+
+.content-board-free-view .content-board-free-view-wrap .profile-item ol {
+  list-style: none;
+  padding-left : 0;
+  display: flex;
+  gap: 5px;
+  margin: 0;
+}
+.content-board-free-view .content-board-free-view-wrap ol li i {
+  padding: 0 5px 0 0;
+}
+.content-board-free-view .content-board-free-view-wrap ol:nth-child(2) li i {
+  cursor: pointer;
+}
+.content-board-free-view-review {}
+.content-board-free-view-review .free-review-box h5 {
+  padding: 50px 0 10px 0;
+}
+.content-board-free-view-review .free-review-box .free-review-list {
+  border: 1px solid #e6eef5;
+  padding : 10px 20px;
+  margin: 0 0 15px 0;
+  border-radius: 5px;
+  background: #fff;
+}
+.content-board-free-view-review .free-review-box .free-review-list ol li i{
+  cursor: pointer;
+}
+.content-board-free-view-write h5 {
+  margin: 85px 0 10px 0;
+}
+.content-board-free-view-write .view-write-btn {
+  margin-top: 10px;
+  background: #246BEB;
+  color: #fff;
+  border: none;
+}
+.content-board-free-view-write .view-write-btn:hover {
+  background: #16408D;
+  transition: .4s all;
 }
 
 /* animation kit */
