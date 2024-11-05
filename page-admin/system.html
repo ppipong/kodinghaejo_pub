@@ -1,46 +1,22 @@
-<!DOCTYPE html>
-<html lang="kr" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>codingHea</title>
-  <!-- Standard css -->
-  <link rel="icon" href="/img/logo/favicon.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  <!-- pub-js link -->
-  <script src="/js/pub-ui-custom.js"></script>
-</head>
-<header>
-    <div id="header"></div>
-</header>
-<body>
-    <div class="container">
-        <div class="system-menu">
-            <p class="xi-wrench"> 시스템 관리</p>
-            <ul>
-                <li><a href="/systemMemberInfo">회원정보</a></li>
-                <li>
-                    <a href="/systemNotice">게시물 관리</a>
-                    <ul class="sub-menu">
-                        <li><a href="/systemNotice">공지사항</a></li>
-                        <li><a href="/systemFreeBoard">자유게시판</a></li>
-                        <li><a href="/systemQBoard">질문게시판</a></li>
-                        <li><a href="/systemReply">댓글 관리</a></li>
-                    </ul>
-                </li>
-                <li><a href="/systemTest">문제 관리</a></li>
-                <li>
-                    <a href="/systemChat">채팅방 관리</a>
-                    <ul class="sub-menu">
-                        <li><a href="/systemChat">채팅방 목록</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div> 
-    </div>
-</body>
-<footer>
-    <div id="footer"></div>
-</footer>
-</html>
+<div class="system-menu">
+<p class="xi-wrench"> 시스템 관리</p>
+<ul>
+    <li><a href="/page-admin/systemMemberInfo">회원정보</a></li>
+    <li>
+        <a href="/page-admin/systemNotice">게시물 관리</a>
+        <ul class="sub-menu">
+            <li><a href="/page-admin/systemNotice">공지사항</a></li>
+            <li><a href="/page-admin/systemFreeBoard">자유게시판</a></li>
+            <li><a href="/page-admin/systemQBoard">질문게시판</a></li>
+            <li><a href="/page-admin/systemReply">댓글 관리</a></li>
+        </ul>
+    </li>
+    <li><a href="/page-admin/systemTest">문제 관리</a></li>
+    <li>
+        <a href="/page-admin/systemChat">채팅방 관리</a>
+        <ul class="sub-menu">
+            <li><a href="/page-admin/systemChat">채팅방 목록</a></li>
+        </ul>
+    </li>
+</ul>
+</div> 

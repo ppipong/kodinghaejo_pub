@@ -33,6 +33,16 @@ fetch("/include/footer.html")
     document.querySelector("#footer").innerHTML = data;
   });
 
+  // admin : nav
+  fetch("/page-admin/system.html")
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    document.querySelector("#system_menu").innerHTML = data;
+  });
+
+  // 로그인 쪽 모달 따로 분리 예정 -- 
 const loginView = (e) => {
   alert(e);
   const modalBackground = document.querySelector(".modal-background");
