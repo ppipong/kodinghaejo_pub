@@ -344,6 +344,9 @@ select:focus{
 , .wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section p
 , .wrap .challenge-content .challenge-content-list .challenge-content-run p 
 , .wrap .challenge-content .challenge-content-list .challenge-content-run .resultArea
+, .wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section ul li
+, .wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section ol li
+, .wrap .challenge-content .challenge-content-list .challenge-content-question .challenge-content-question-section dl dd
 {
   color: #fff;
 }
@@ -985,6 +988,71 @@ div[class*="-form"] {
   background: #16408D;
   transition: .4s all;
 }
+
+/********** 관리자 : admin **********/
+/* 
+.container {
+  display: flex;
+  margin: 20px; 
+} */
+/* 
+.system-menu {
+  float: left; 
+  width: 180px; 
+  height: auto;
+  padding: 20px; 
+  margin-top: 20px; 
+  margin-left: 20px; 
+  border: 3px solid rgb(194, 194, 194); 
+  box-sizing: border-box; 
+  border-radius: 10px; 
+}
+
+.system-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.system-menu li {
+  position: relative;
+  margin: 10px 0;
+}
+
+.system-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px; 
+  display: block; 
+  border-radius: 4px; 
+  font-size: 16px; 
+}
+
+.system-menu a:hover {
+  background-color: #f0f0f0; 
+}
+
+
+.sub-menu {
+  display: none; 
+  background-color: white; 
+  z-index: 10; 
+  padding: 0; 
+  margin: 0; 
+  position: relative; 
+}
+
+.system-menu li:hover .sub-menu {
+  display: block; 
+}
+
+.sub-menu li {
+  margin: 5px 0; 
+  padding-left: 10px; 
+}
+
+.sub-menu a {
+  font-size: 14px; 
+} */
 
 /* animation kit */
 @keyframes fadeInDown {
