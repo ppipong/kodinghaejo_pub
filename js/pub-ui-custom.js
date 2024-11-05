@@ -17,8 +17,7 @@ fetch("/include/footer.html")
   });
 
 window.onload = () => {
-
-  if (document.querySelector('.main-navbar')) {
+    if (document.querySelector('.main-navbar')) {
     document.addEventListener('mouseover', function(event) {
       if (event.target.closest('.main-list-item .nav-hover') || event.target.closest('.main-nav-list-menu')) {
         document.querySelector('.main-nav-list-menu').classList.add('active');
