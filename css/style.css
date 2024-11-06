@@ -294,7 +294,7 @@ th {
   color: #fff;
 }
 /* .toastui-editor-mode-switch { display: none !important; } */
-/* ********* problem : 코딩테스트 부분 **********/
+/* ********* problemCollect : 코딩테스트 부분 **********/
 .banner-zone {
   width: 100%;
   background: #0F0F13;
@@ -317,6 +317,12 @@ th {
 }
 .banner-zone .banner-content .content-banner-title p {
   margin: 2px 0;
+}
+.banner-zone .banner-content .content-banner-img img:nth-child(1) {
+  animation: float 1.5s infinite;
+}
+.banner-zone .banner-content .content-banner-img img:nth-child(2) {
+  animation: float 3s infinite;
 }
 /* 리스트 박스 부분 */
 .list-box-content ul {
@@ -1298,12 +1304,13 @@ a.btn_delete:hover {
   }
 }
 @keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes float {
+  0% {transform: translateY(0%);}
+  50% {transform: translateY(3%);}
+  100% {transform: translateY(0%);}
 }
 .rotate-vert-center {
   -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
