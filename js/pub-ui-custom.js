@@ -42,7 +42,9 @@ fetch("/include/footer.html")
     document.querySelector("#system_menu").innerHTML = data;
   });
 
-  // 로그인 쪽 모달 따로 분리 예정 -- 
+
+// 로그인 쪽 모달 -- 나중 처리 
+/* 
 const loginView = (e) => {
   alert(e);
   const modalBackground = document.querySelector(".modal-background");
@@ -55,8 +57,34 @@ const loginView = (e) => {
     alert(e);
   }
 }
-
 const loginChk = () => {};
+*/
+
+/* 공통 드롭다운 */
+function listDropdown() {
+  const itemli = document.querySelectorAll('.toggle_btn');
+  // const innerArea = document.querySelector('.list-box-content');
+  
+  itemli.forEach(function (item) {
+    item.addEventListener('click', function () {
+      // 현재 클릭한 요소에 'on' 클래스 토글
+      this.classList.toggle('on');
+  
+      // 다른 요소들에서 'on' 클래스 제거
+      itemli.forEach(function (otherItem) {
+        if (otherItem !== item) {
+          otherItem.classList.remove('on');
+        }
+      });
+    });
+  });
+}
+
+
+
+
+
+
 
 document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {

@@ -102,6 +102,7 @@ button:hover
   background-color: #F8F9FA;
   font-weight: 500;
 }
+
 /* default-tage-set */
 span[class*=-tag] {
   font-size: 10px;
@@ -127,6 +128,14 @@ span.card-small-blue-tag {
   color: #2768FF;
   background: #E9F0FF;
 }
+/* input select custom */
+.search-inp {
+  display: flex;
+}
+.search-inp input {
+  width: 100%;
+  height: 46px;
+}
 select
 , input[type="text"] 
 {
@@ -140,6 +149,7 @@ select:focus
 {
   border: 1px solid #333;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -284,6 +294,123 @@ th {
   color: #fff;
 }
 /* .toastui-editor-mode-switch { display: none !important; } */
+/* ********* problem : 코딩테스트 부분 **********/
+.banner-zone {
+  width: 100%;
+  background: #0F0F13;
+  height: 300px;
+  color: #fff;
+}
+.banner-zone .banner-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+.banner-zone .banner-content .content-banner-title {
+  padding-top: 70px;
+}
+.banner-zone .banner-content .content-banner-title h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.banner-zone .banner-content .content-banner-title p {
+  margin: 2px 0;
+}
+/* 리스트 박스 부분 */
+.list-box-content ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  /* min-width: max-content; */
+}
+.list-box-content ul li { 
+  margin: 10px 0;
+}
+.list-box {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.list-box .toggle_btn {
+  position: relative;
+  width: 100%;
+  min-width: 200px;
+  height: 46px;
+  padding: 0 20px;
+  border: none;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 300;
+}
+.list-box .toggle_btn::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  display: inline-block;
+  transform: rotate(135deg);
+  position: absolute;
+  right: 17px;
+  bottom: 20px;
+  transition: 0.2s;
+}
+.list-box .toggle_btn.on::after {
+  transform: rotate(315deg);
+  bottom: 15px;
+}
+.list-box .toggle_btn.on + .list-box-content {
+  /* width: inherit; */
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+}
+.list-box .list-box-content {
+  display: none;
+}
+/* 리스트 박스 부분 끝 */
+.inp-group {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: stretch;
+}
+.inp-group .select-inp.problem {
+  width: 33%;
+}
+.inp-group .select-inp.problem .list-box-title {
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.problem-board-table {
+  border-radius: 5px;
+}
+.problem-board-table table {
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+.problem-board-table table thead tr th {
+  background: #F0F6FD;
+  font-size: 14px;
+  font-weight: 400;
+}
+.content-problem-board .problem-board-table-paging .paginate a {
+  border: none;
+  padding: 9px 5px;
+}
+.content-problem-board .problem-board-table-paging .paginate a.on {
+  background: #0F0F13;
+  border-radius: 999px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 /* ********* challenge : 코딩테스트 부분 **********/
 .challenge-navbar .navbar-breadcrumb { 
   width: 100%;
@@ -1032,6 +1159,7 @@ div[class*="-form"] {
   background: #16408D;
   transition: .4s all;
 }
+
 
 /********** 관리자 : admin **********/
 .system-menu {
