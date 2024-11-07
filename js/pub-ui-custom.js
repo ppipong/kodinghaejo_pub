@@ -44,7 +44,7 @@ fetch("/page-admin/system.html")
   });
 
 // mypageManu : nav
-fetch("/page-user/mypage.html")
+fetch("/page-member/mypage.html")
   .then((response) => {
     return response.text();
   })

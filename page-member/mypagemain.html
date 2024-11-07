@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>내 정보</title>
-  <!-- Standard css -->
-  <link rel="icon" href="/img/logo/favicon.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  <!-- pub-js link -->
-  <script src="/js/pub-ui-custom.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 정보</title>
+    <!-- Standard css -->
+    <link rel="icon" href="/img/logo/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- pub-js link -->
+    <script src="/js/pub-ui-custom.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,6 @@
                 <!-- <p>닉네임</p> -->
               </div>
             </div>
-            
           </div>
 
           <h5>기본정보</h5>
@@ -56,28 +55,17 @@
                 감사합니다
               </p>
               <div class="profile_btn_grup">
-                <input type="button" id="btn_dsc" value="자기소개 변경하기" onclick="">
-                <input type="button" id="btn_mypage" value="내 정보 수정" onclick="">
+                <input type="button" value="자기소개 변경하기" onclick="">
+                <input type="button" value="내 정보 수정" onclick="">
               </div>
-            </div>
-          </div>
-
-          <h5>나의 랭킹</h5>
-          <div class="mypage_box">
-            <p>LV.5 랭킹 999위</p>
-            <p>풀어본문제 : 9999</p>
-            <p>맞춘문제 : 9999</p>
-            <p>정답률 : 9999</p>
-            <div class="profile_btn_grup">
-              <input type="button" id="btn_mytest" class="btn_mytest" value="내문제 가기" onclick="">
             </div>
           </div>
 
           <h5>비밀번호</h5>
           <div class="mypage_box">
-            <p>최근 업데이트 : date</p>
+            <p>최근 업데이트 일 : date</p>
             <div class="profile_btn_grup">
-              <input type="button" id="btn_password" class="btn_password" value="비밀번호 수정" onclick="">
+              <input type="button" value="비밀번호 수정" onclick="">
             </div>
           </div>
 
@@ -96,19 +84,6 @@
 
   <!-- footer -->
   <div id="footer"></div>
-  <button id="removeBtn">Remove style</button>
-  <script>
-    const parentElement = document.querySelector('.container'); // 부모 요소 선택
-    const childElements = parentElement.querySelectorAll('*'); // 모든 자식 요소 선택
-    console.log(childElements); // 자식 요소들 출력
-    document.getElementById("removeBtn").onclick = function () {
-      console.log(this);
-      childElements.forEach(function (child) {
-        child.removeAttribute('style');
-        console.log(this);
-      });
-    } 
-  </script>
 </body>
 
 </html>
