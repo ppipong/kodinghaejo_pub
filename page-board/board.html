@@ -39,19 +39,6 @@
         </ul>
 
         <!-- 임시 테스트용 : 1 -->
-        <div class="wrap">
-          <div class="list_box">
-            <!-- <div class="content_area"><span>내용</span></div> -->
-            <button type="button" class="toggle_btn" style="width: 200px;">주제를 선택해 주세요</button>
-            <div class="inner_area">
-              <ul>
-                <li><a href="/">자유주제</a></li>
-                <li><a href="/">커리어고민</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <style>
           ul {
             margin: 0;
@@ -123,7 +110,18 @@
           }
 
         </style>
-        
+        <div class="wrap">
+          <div class="list_box">
+            <!-- <div class="content_area"><span>내용</span></div> -->
+            <button type="button" class="toggle_btn" style="width: 200px;">주제를 선택해 주세요</button>
+            <div class="inner_area">
+              <ul>
+                <li><a href="/">자유주제</a></li>
+                <li><a href="/">커리어고민</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <script>
           let itemli = document.querySelectorAll('.toggle_btn');
 
@@ -142,7 +140,6 @@
           });
         </script>
        
-        <div class="mt40"></div>
         <!-- 임시 테스트용 : 2 -->
         <div class="dropdown-btn-box">
           <div class="dropdown-btn-menu">
@@ -153,17 +150,6 @@
             <button>커리어고민</button>
           </div>
         </div>
-
-        <style>
-          .dropdown-btn-box {
-            width: 200px;
-          }
-          .dropdown-btn-box .dropdown-btn-item {
-            /* display: flex; */
-            /* flex-direction: column; */
-          }
-        </style>
-
         <script>
           // 드롭다운 버튼과 드롭다운 메뉴 요소 선택
           const dropdownMenu = document.querySelector('.dropdown-btn-menu');
@@ -180,6 +166,22 @@
           });
         </script>
         
+        <!-- 인라인 style 제거 유틸 : 해당 소스에 넣고 돌린다음에 복사 떠오기 : 복사 붙여 넣기 안되서 하는 법 -->
+        <button id="removeBtn">Remove style</button>
+        <script>
+          const parentElement = document.querySelector('.container'); // 부모 요소 선택
+          const childElements = parentElement.querySelectorAll('*'); // 모든 자식 요소 선택
+          console.log(childElements); // 자식 요소들 출력
+
+          document.getElementById("removeBtn").onclick = function() {
+            console.log(this);
+            childElements.forEach(function(child) {
+              child.removeAttribute('style');
+              console.log(this);
+            });
+          } 
+        </script> 
+
       </div>
     </div>
   </div>

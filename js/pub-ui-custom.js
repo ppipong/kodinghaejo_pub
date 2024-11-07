@@ -5,6 +5,7 @@ fetch("/include/header.html")
   })
   .then((data) => {
     document.querySelector("#header").innerHTML = data;
+
     /* header : 드롭다운 */
     if (document.querySelector(".main-navbar")) {
       document.addEventListener("mouseover", function (event) {
@@ -33,13 +34,22 @@ fetch("/include/footer.html")
     document.querySelector("#footer").innerHTML = data;
   });
 
-  // admin : nav
-  fetch("/page-admin/system.html")
+// admin : nav
+fetch("/page-admin/system.html")
   .then((response) => {
     return response.text();
   })
   .then((data) => {
     document.querySelector("#system_menu").innerHTML = data;
+  });
+
+// mypageManu : nav
+fetch("/page-user/mypage.html")
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    document.querySelector("#mypage_manu").innerHTML = data;
   });
 
 

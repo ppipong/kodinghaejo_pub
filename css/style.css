@@ -658,12 +658,12 @@ header {
 }
 /************************ footer *************************/
 #footer {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 footer {
   background: #000;
   margin: 0 auto;
-  height: 220px;
+  height: 250px;
 }
 footer .footer-content {
   padding: 50px 0;
@@ -677,10 +677,131 @@ footer .footer-content p
   margin: 0 auto;
   max-width: 1200px;
 }
+footer .footer-sub .btn_admin_go {
+  margin: 20px;
+}
+
 /************************ join *************************/
 div[class*="-form"] {
   padding: 10px 0;
 }
+/************************ Mypage *************************/
+.column-row.myPage {
+  gap: 20px;
+}
+.column-row.myPage h5 {
+  margin: 40px 0 10px 0;
+  font-size: 16px;
+}
+.column-row.myPage h5:first-child {
+  margin: 10px 0;
+}
+.bgcontain-mypage {
+  background: #F9FAFB;
+  padding: 50px 0;
+  width: 100%;
+  height: 100%;
+}
+.mypage_menu 
+, .mypage_box
+{
+  padding: 20px;
+  border: 1px solid #D7E2EB;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.mypage_menu ul 
+,.mypage_menu ol
+{
+  list-style-type: none;
+  padding-left: 0;
+}
+.mypage_menu ol {
+  margin-left: 10px;
+}
+.mypage_menu ul li {
+  padding: 8px 10px;
+}
+.mypage_menu ul li:hover {
+  background: #f8fafc;
+  border-radius: 5px;
+  color: #0089FF;
+  font-weight: 500;
+}
+.mypage_menu ul li.active {
+  background: #E6F2FF;
+}
+.mypage_menu ul li ol li {
+  margin-left: 10px;
+}
+.mypage_box .mypage_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.mypage_box .mypage_profile .profile_img {
+  width: 150px;
+  height: 150px;
+  /* background: tomato; */
+  border-radius: 999px;
+}
+.mypage_box .mypage_profile .profile_name .profile_email {
+  font-weight: 500;
+}
+.mypage_box .mypage_profile .profile_name .profile_email_crtf 
+, .mypage_box .mypage_profile .profile_name .profile_email_crtf_ok
+{
+  color: #51B250;
+}
+.mypage_box .mypage_profile .profile_name .profile_email_crtf_ok i {
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+}
+.mypage_box .mypage_profile .profile_img img {
+  width: inherit;
+}
+.mypage_box .profile_list ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.mypage_box .profile_list ul li {
+  padding: 5px 0;
+}
+.mypage_box .profile_list ul li b { 
+  font-weight: 400;
+}
+.mypage_box .profile_list h6 {
+  font-size: 14px;
+  margin-top: 20px;
+}
+.mypage_box .profile_btn_grup
+, .mypage_box .profile_list .profile_btn_grup {
+  text-align: right;
+  border-top: 1px dashed #D7E2EB;
+  padding: 30px 0 15px 0;
+  margin-top: 50px;
+}
+.mypage_box .profile_list .profile_btn_grup input[type="button"] {
+  margin-right: 10px;
+}
+.mypage_box .profile_btn_grup input[type="button"]:hover
+, .mypage_box .profile_list .profile_btn_grup input[type="button"]:hover {
+  background: #B5DAFF;
+  border: 1px solid transparent;
+  transition: .4s all;
+}
+.mypage_box .mypage_box_item {
+  margin: 20px 0;
+}
+.mypage_box .mypage_box_item h6 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
 /************************ main *************************/
 /* main : banner */
 .container .main-banner {
