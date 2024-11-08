@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="kr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
     <!-- pub-js link -->
     <script src="/js/pub-ui-custom.js"></script>
 </head>
-
 <body>
     <!-- header-->
     <div id="header"></div>
@@ -23,11 +21,11 @@
         </div>
         <div class="c-column-8">
           <div class="mypage_content">
-            <h5>내가 쓴 게시판 관리</h5>
+            <h5>내가 쓴 글 관리</h5>
           
             <div class="mypage_box">
               <div class="mypage_box_item">
-                <h6>내가 작성한 자유게시글 <span>{0}</span></h6>
+                <h6>내가 작성한 게시글 <span>{0}</span></h6>
                 <table>
                   <caption style="display: none;">mypage테이블 입니다</caption>
                   <colgroup>
@@ -52,12 +50,12 @@
                   <tbody>
                     <tr>
                       <td>1</td>
-                        <td><a href="#">자유게시판</a></td>
-                        <td>안녕하세요</td>
-                        <td><span>24/10/25</span></td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td><button class="btn_delete">삭제</button></td>
+                      <td><a href="#">자유게시판</a></td>
+                      <td>안녕하세요</td>
+                      <td>24/10/25</td>
+                      <td>5</td>
+                      <td>5</td>
+                      <td><button class="btn_delete">삭제</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -85,8 +83,9 @@
                   </div>
                 </div>
               </div>
+              <hr class="dashed">
               <div class="mypage_box_item">
-                  <h6>댓글 관리</h6>
+                  <h6>댓글 {0}</h6>
                   <table>
                     <caption style="display: none;">mypage테이블 입니다</caption>
                     <colgroup>
@@ -153,20 +152,6 @@
     </div>
     <!-- footer -->
     <div id="footer"></div>
-
-    <button id="removeBtn">Remove style</button>
-    <script>
-        const parentElement = document.querySelector('.container'); // 부모 요소 선택
-        const childElements = parentElement.querySelectorAll('*'); // 모든 자식 요소 선택
-        console.log(childElements); // 자식 요소들 출력
-        document.getElementById("removeBtn").onclick = function () {
-            console.log(this);
-            childElements.forEach(function (child) {
-                child.removeAttribute('style');
-                console.log(this);
-            });
-        } 
-    </script>
 </body>
 
 </html>
