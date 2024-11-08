@@ -89,6 +89,9 @@ function listDropdown() {
     });
   });
 }
+const rank_tab = document.getElementById('#rank_tab');
+console.log(rank_tab);
+
 
 document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
