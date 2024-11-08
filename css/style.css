@@ -1035,10 +1035,35 @@ div[class*="-form"] {
 .content-board-notice-write .content-board-notice-write-wrap label {
   font-weight: 500;
 }
-.content-board-notice-write .content-board-notice-write-wrap .category-footer button:nth-child(1) {
-  
+/* ********* notice-list-board ********* */
+.board-notice-view .profile-title {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* border: 1px solid #ced4da; */
+  /* border-radius: 5px; */
+  padding: 20px;
 }
-
+.board-notice-view .profile-title img {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+}
+.board-notice-view .profile-title .profile-title-content p {
+  margin: 0;
+}
+.board-notice-view .profile-title .profile-title-content .profile-name {
+  font-weight: 400;
+}
+.board-notice-view .profile-title .profile-title-content .profile-date {
+  font-size: 14px;
+  color: #777777;
+}
+.board-notice-view .board-notice-view-content > p {
+  min-height: 400px;
+}
+.board-notice-view
 /* ********* free-board ********* */
 .content-board-free .content-board-free-content {
   /* border: 1px solid tomato; */
