@@ -1,124 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="kr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>게시판</title>
+  <!-- Standard css -->
+  <link rel="icon" href="/img/logo/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!-- pub-js link -->
+  <script src="/js/pub-ui-custom.js"></script>
 </head>
+<!-- 게시판 복사용 게시판 : 테스트 용도입니다-->
 <style>
-  /************************ header *************************/
-  header {
-    border-bottom: 1px solid #E7E7E7;
-    background-color: #FFFFFF;
-  }
-
-  .main-navbar {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-    justify-content: space-between;
-  }
-
-  .main-navbar .main-navbar-list {
-    height: 50px;
-    margin: 0;
-    display: flex;
-  }
-
-  .main-navbar .main-navbar-list .main-list-item {
-    padding-left: 10px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .main-navbar .main-navbar-list .main-list-item li.active::after {
-    content: "";
-  }
-
-  .main-navbar .main-navbar-list .main-list-item li {
-    color: #000;
-  }
-
-  .main-navbar .main-navbar-list .main-list-item li::marker {
-    content: "";
-  }
-
-  .main-navbar .main-navbar-list .main-list-item li::after {
-    margin-left: 10px;
-  }
-
-  .main-navbar .main-navbar-list .main-list-item.login {
-    font-size: 12px;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .main-navbar .main-navbar-list .main-list-item.login .login_profile {
-    text-align: center;
-    align-items: center;
-    display: flex;
-  }
-
-  .main-navbar .main-navbar-list .main-list-item li a:hover {
-    font-weight: 400;
-  }
-
-  /* 기본 default 값이 숨김 처리 */
-  .main-nav-list-menu {
-    display: none;
-    transition: all 0.2s;
-  }
-
-  .main-nav-list-menu.active {
-    display: block;
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    background: #fff;
-    animation: fadeIn .3s ease-in-out;
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 25px 225px;
-    flex-basis: 1em;
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item .menu-item {
-    flex-basis: 150px;
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item ul {
-    list-style: none;
-    padding-left: 0;
-
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item ul li {
-    padding: 8px 0;
-    margin: 0;
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item ul li a:hover {
-    font-weight: 400;
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item ul li b {
-    color: seagreen;
-  }
-
-  .main-nav-list-menu .main-nav-list-menu-item .menu-item {
-    padding: 0 5px;
-  }
-
   #chatroom {
     width: auto;
     height: 900px;
@@ -128,7 +22,6 @@
     width: 20%;
     height: 100%;
     float: left;
-    border-radius: 20px;
     box-sizing: border-box;
     background: #E7E7E7;
   }
@@ -239,67 +132,19 @@
 </style>
 
 <body>
-  <nav class="main-navbar">
-    <a href="/" class="navbar-logo"><img src="/img/logo/icon.png" alt="logo" style="height: 30px; margin-top: 5px;"></a>
-    <div class="main-navbar-list">
-      <ol class="main-list-item">
-        <li><a href="/">manu 1</a></li>
-        <li><a href="/">manu 2</a></li>
-        <li class="active">manu 3</li>
-      </ol>
-      <div class="member-group">
-        <ul class="main-list-item">
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main id="chatroom">
+  <!-- header 영역 -->
+  <div id="header"></div>
+  <div id="chatroom">
     <section class="chatlist">
       <div class="search">
         채팅방, 참여자 검색
       </div>
       <div class="chatroom">
-
         <ul class="CRul">
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
-          <li class="CRli">
-            채팅방
-          </li>
+          <li class="CRli">채팅방</li>
         </ul>
       </div>
-
     </section>
-
     <section class="chatinfo">
 
       <div class="cisearch">
@@ -334,39 +179,15 @@
         </p>
       </div>
 
-    </section>
+    </section> 
 
     <section class="msgbox">
-
       <div class="msguser">
         대화 상대
       </div>
       <div class="msgreceive">
         <ul class="MSGul">
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
-          <li class="MSGli">
-            대화 내용
-          </li>
+          <li class="MSGli"> 대화 내용</li>
         </ul>
       </div>
 
@@ -375,12 +196,12 @@
         <input type="button" id="btn_sendMessage" class="btn_sendMessage" value="메시지 전송">
         <button>첨부 파일</button>
       </div>
-
     </section>
-  </main>
+  </div>
 
-  <!-- <script>
-        let username = document.querySelector('#username');
+  <!-- 
+  <script>
+  let username = document.querySelector('#username');
 	let message = document.querySelector('#message');
 	let str = '';
 	
