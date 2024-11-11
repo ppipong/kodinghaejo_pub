@@ -100,34 +100,11 @@
     </div>
   </div>
 
-  <script>
-    const btnMenu = document.querySelectorAll('.rank_tab_group li');
-    const menuContent = document.querySelectorAll('.content-rank-main .content-rank-toggle-menu-item')
-    let menuCount = '';
-
-    for(let i = 0; i < btnMenu.length; i++){
-      btnMenu[i].querySelector('.btn_tab_menu').addEventListener('click', function(e){
-          e.preventDefault();
-          for(let j = 0; j < btnMenu.length; j++){
-
-          // 나머지 버튼 클래스 제거
-          btnMenu[j].classList.remove('on');
-
-          // 나머지 컨텐츠 display:none 처리
-          menuContent[j].style.display = 'none';
-          }
-
-          // 버튼 관련 이벤트
-          this.parentNode.classList.add('on');
-
-          // 버튼 클릭시 컨텐츠 전환
-          menuCount = this.getAttribute('href');
-          document.querySelector(menuCount).style.display = 'block';
-      });
-    }
-  </script>
   <!-- footer영역 -->
   <div id="footer"></div>
 </body>
-
+<script>
+  // pub-ui-custom : 탭 메뉴
+  toggleTab();
+</script>
 </html>
