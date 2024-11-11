@@ -70,7 +70,10 @@ const loginView = (e) => {
 const loginChk = () => {};
 */
 
-/* 공통 드롭다운 */
+/* 문제 /problemCollect : 드롭다운 */
+const rank_tab = document.getElementById('#rank_tab');
+console.log(rank_tab);
+
 function listDropdown() {
   const itemli = document.querySelectorAll('.toggle_btn');
   // const innerArea = document.querySelector('.list-box-content');
@@ -89,9 +92,6 @@ function listDropdown() {
     });
   });
 }
-const rank_tab = document.getElementById('#rank_tab');
-console.log(rank_tab);
-
 
 document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
