@@ -89,11 +89,9 @@ function pagenation() {
   });
 }
 
-/* 문제 /problemCollect : 드롭다운 -- 느린 것 수정 해야됨 */
+/* 문제 /problemCollect : 드롭다운 메뉴 */
 function listDropdown() {
-  const rank_tab = document.getElementById('#rank_tab');
-  const itemli = document.querySelectorAll('.toggle_btn');
-  console.log(rank_tab);
+  let itemli = document.querySelectorAll('.toggle_btn');
   itemli.forEach(function (item) {
     item.addEventListener('click', function () {
       // 현재 클릭한 요소에 'on' 클래스 토글
@@ -117,18 +115,18 @@ function toggleTab() {
   
   for(let i = 0; i < btnMenu.length; i++){
     btnMenu[i].querySelector('.btn_tab_menu').addEventListener('click', function(e){
-        e.preventDefault();
-        for(let j = 0; j < btnMenu.length; j++){
-          // 나머지 버튼 클래스 제거
-          btnMenu[j].classList.remove('on');
-          // 나머지 컨텐츠 display:none 처리
-          menuContent[j].style.display = 'none';
-        }
-        // 버튼 관련 이벤트
-        this.parentNode.classList.add('on');
-        // 버튼 클릭시 컨텐츠 전환
-        menuCount = this.getAttribute('href');
-        document.querySelector(menuCount).style.display = 'block';
+      e.preventDefault();
+      for(let j = 0; j < btnMenu.length; j++){
+        // 나머지 버튼 클래스 제거
+        btnMenu[j].classList.remove('on');
+        // 나머지 컨텐츠 display:none 처리
+        menuContent[j].style.display = 'none';
+      }
+      // 버튼 관련 이벤트
+      this.parentNode.classList.add('on');
+      // 버튼 클릭시 컨텐츠 전환
+      menuCount = this.getAttribute('href');
+      document.querySelector(menuCount).style.display = 'block';
     });
   }
 }

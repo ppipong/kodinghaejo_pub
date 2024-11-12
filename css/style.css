@@ -1425,6 +1425,11 @@ div[class*="-form"] {
   transition: .4s all;
 }
 /********** 채팅방 바로가기 : chatmain **********/
+.chat-title h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
 .chat-tag-wrap {
   margin-bottom: 30px;
 }
@@ -1448,12 +1453,6 @@ div[class*="-form"] {
   position: relative;
   bottom: 1px;
 }
-.content-chat-wrap .chat-list {
-  max-height: 500px;
-  gap: 20px;
-  overflow-y: auto;
-  background: #f5f5f5;
-}
 .content-chat-wrap details summary {
   background: #222;
   color: #fff;
@@ -1465,6 +1464,18 @@ div[class*="-form"] {
 }
 .content-chat-wrap details[open] summary{
   background: #363D7A;
+}
+.content-chat-wrap .chat-list {
+  max-height: 500px;
+  gap: 20px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+.content-chat-wrap .chat-list .chat-list-head {
+  width: 100%;
+  padding : 10px 25px;
+  background: #fff;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(0,212,255,0) 100%);
 }
 .content-chat-wrap details summary i{
   margin-right: 10px;
@@ -1519,6 +1530,7 @@ div[class*="-form"] {
 .content-chat-wrap .chat-list .chat-list-item ol .user p {
   margin: 0;
 }
+/* 채팅 상세보기 : chatView */
 .chat-content .chat-view-nav {
   background: #000;
   width: 100%;
@@ -1544,21 +1556,30 @@ div[class*="-form"] {
   float: right;
   z-index: 1;
 }
-.chat-content .chat-nav-side {
-  
-}
 .chat-content .chat-view-body {
   height: 800px;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
+  background: #DFE6F2;
   overflow-y: auto;
 }
-.chat-content .chat-view-body p {
-  background: tomato;
-}
-.chat-content .chat-view-body p ul {
+.chat-content .chat-view-body ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.chat-content .chat-view-body .chat-message {
+  background: #ffffff;
+  width: 50%;
+  padding: 15px 20px 15px;
+  border-radius: 0 25px 25px 25px;
+}
+.chat-content .chat-view-body .chat-message-user {
+  background: #3F527C;
+  width: 50%;
+  padding: 15px 20px 15px;
+  border-radius: 25px 0 25px 25px;
 }
 .chat-content .chat-send-message {
   border: 1px solid tomato;
