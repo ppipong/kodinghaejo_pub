@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판</title>
+  <!-- Standard css -->
+  <link rel="icon" href="/img/logo/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!-- pub-js link -->
+  <script src="/js/pub-ui-custom.js"></script>
+</head>
+
+<body>
+  <!-- header 영역 -->
+  <div class="container">
+    <div class="main-content">
+      <div class="chat-content">
+        <div class="chat-view-nav">
+          <div class="chat-view-nav-title">
+            <ul>
+              <li><a href="#" onclick="history.back();" role="button"><i class="xi-angle-left"></i><span class="hidden">뒤로가기</span></a></li>
+              <li class="profile">
+                <img src="/img/test-profile/narrping.png" alt="" style="width: 50px;">
+                <p><b>아무개님</b>과의 대화</p>
+              </li>
+              <li><a href="#" onclick=""><i class="xi-hamburger-back" role="button"></i></a><span class="hidden">사이드 바</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="chat-nav-side">
+          <div class="chat-nav-side-item">
+            <b>대화상대</b>
+            <p>대화상대</p>
+          </div>
+          <div class="chat-nav-side-item">
+            <b>사진/동영상</b>
+            <p>사진/동영상</p>
+          </div>
+          <div class="chat-nav-side-item">
+            <b>첨부파일</b>
+            <p>첨부파일</p>
+          </div>
+          <div class="chat-nav-side-item">
+            <b>채팅방태그</b>
+            <p>채팅방태그</p>
+          </div>
+        </div>
+        <div class="chat-view-body">
+          <div class="chat-message">
+            <ul>
+              <li>user : <span>김아무개씨</span></li>
+              <li>message : <span>대화내용 발싸</span></li>
+            </ul>
+          </div>
+          <div class="chat-message-user">
+            <ul>
+              <li>user : <span>김아무개씨</span></li>
+              <li>message : <span>대화내용 발싸</span></li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class="chat-send-message">
+          <input type="text" placeholder="하위">
+          <input type="button" value="발송">
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+  <!-- footer영역 -->
+  <div id="footer"></div>
+</body>
+
+</html>
