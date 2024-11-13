@@ -12,7 +12,7 @@
   <script src="/js/pub-ui-custom.js"></script>
 </head>
 
-<body style="overflow: hidden;">
+<body style="overflow-x: hidden;">
   <!-- header 영역 -->
   <div class="container" style="min-height: auto;">
     <div class="main-content">
@@ -25,7 +25,7 @@
                 <img src="/img/test-profile/moseyping.png" alt="" style="width: 50px;">
                 <p><b>김아무개님</b>과의 대화</p>
               </li>
-              <li class="chat-nav-side-btn"><a href="#" onclick=""><i class="xi-hamburger-back" role="button" onclick="chatViewSideBar()"></i></a><span class="hidden">사이드 바</span></li>
+              <li class="chat-nav-side-btn"><a href="#" onclick=""><i class="xi-hamburger-back" role="button"></i><span class="hidden">사이드 바</span></a></li>
             </ul>
           </div>
         </div>
@@ -99,19 +99,14 @@
           <div class="chat-start-end fadeInDown">
             <b>{user}</b> 님이 나가셨습니다
           </div>
-
-          <div id="innerWidth"></div>
-          <div id="innerHeight"></div>
-          <div id="newInnerWidth"></div>
-          <div id="newInnerHeight"></div>
         </div> <!-- chat-view-body end-->
         <div class="chat-send-message">
           <div class="input-box-custom">
           </div>
           <input type="text" placeholder="하위">
-          <button value="발송"><i class="xi-send"></i></button>
-          <button value="플러스 메뉴"><i class="xi-plus-circle"></i></button>
-          
+          <!-- 버튼 커스텀 해야됨 -->
+          <button class="" type="submit"><i class="xi-send"></i></button>
+          <button class="" ><i class="xi-plus-circle"></i></button>
         </div>
       </div>
  

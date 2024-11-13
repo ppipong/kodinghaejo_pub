@@ -1694,18 +1694,15 @@ div[class*="-form"] {
 /* 채팅 사이드바 커스텀 */
 .chat-nav-side {
   position: absolute;
-  float: right;
   top: 51px;
-  left: 770px;
-  right: 0;
+  right: 375px;
   bottom: 0;
   background: #fff;
-  width: 40%;
+  width: 400px;
   height: 893px;
   z-index: 1;
   padding: 0 30px;
   box-shadow: rgba(0, 0, 0, 0.15) -8px 0px 8px;
-  border: 1px solid tomato;
 }
 .chat-nav-side.active {
   display: block;
@@ -1941,4 +1938,9 @@ a.btn_delete:hover {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
+}
+
+/* 예외 리사이징 */
+@media (max-width: 1080px) {
+  .chat-nav-side {right: 0;}
 }

@@ -16,9 +16,7 @@ fetch("/include/header.html")
           document.querySelector(".main-nav-list-menu").classList.add("active");
           document.querySelector(".main-nav-list-menu").style.zIndex = 1000;
         } else if (!event.target.closest(".main-navbar")) {
-          document
-            .querySelector(".main-nav-list-menu")
-            .classList.remove("active");
+          document.querySelector(".main-nav-list-menu").classList.remove("active");
           document.querySelector(".main-nav-list-menu").style.zIndex = 0;
         }
       });
@@ -75,7 +73,7 @@ function pagenation() {
   const paginateContainers = document.querySelectorAll('.paginate');
   paginateContainers.forEach(container => {
     // 각 페이지네이션 컨테이너에서 페이지 번호 링크들만 선택
-    const pageLinks = container.querySelectorAll('a[href="#"]');
+    const pageLinks = container.querySelectorAll('a');
 
     pageLinks.forEach(link => {
       link.addEventListener('click', function(e) {
@@ -87,6 +85,7 @@ function pagenation() {
       });
     });
   });
+
 }
 
 /* 문제 /problemCollect : 드롭다운 메뉴 */
@@ -105,6 +104,7 @@ function listDropdown() {
       });
     });
   });
+
 }
 
 /* 랭크 /rank : 탭 */
@@ -129,35 +129,24 @@ function toggleTab() {
       document.querySelector(menuCount).style.display = 'block';
     });
   }
+
 }
 
 /* 채팅 사이드바 /chatView  */
 function chatViewSideBar() {
   const sideBtn = document.querySelectorAll('.chat-nav-side-btn');
-  const sideArea = document.querySelectorAll('.chat-nav-side');
-
-  const width = window.innerWidth;
-  const height = window.innerHeight;
+  const sideArea = document.querySelector('.chat-nav-side');
   
-  // 클라이언트 값 체크
-  document.getElementById('innerWidth').innerHTML = 'innerWidth(스크롤 포함 가로길이) : ' + window.innerWidth;
-  document.getElementById('innerHeight').innerHTML = 'innerHeight(스크롤 포함 세로길이) : ' + window.innerHeight;
-
-  if(sideArea) {
-    const newWidth = width * 0.4; 
-    console.log(newWidth);
-    sideArea.style.width = `calc(${newWidth}px)`;
-  }
-
-  chatViewSideBar();
-  window.addEventListener('resize', chatViewSideBar);
-  // 버튼 이벤트 잠시 홀드
-  // this.addEventListener('click', () => {
-  //   console.log(sideBtn);
-  //   console.log(sideArea);
-  //   sideArea.target.classList.toggle('active');
-  // });
-
+  sideBtn.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (sideArea.style.display === 'none') {
+        sideArea.style.display = 'block';
+      } else {
+        sideArea.style.display = 'none'; 
+      }
+    });
+  });
+  
 }
 
 document.addEventListener('click', function(event) {
