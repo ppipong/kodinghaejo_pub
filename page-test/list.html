@@ -31,7 +31,7 @@
   </div>
   <div class="container">
     <div class="content-problem-board mt50">
-      <div class="problem-board-title">
+      <div class="problem-board-title clearfix">
         <!-- 검색창 : 커스텀 들어가야됨 -->
         <div class="search-inp">
           <input type="text" name="" id="" placeholder="풀고 싶은 문제 제목을 입력해 주세요">
@@ -80,7 +80,20 @@
             </div>
           </div>
         </div>
-        
+        <hr class="dashed mt20 mb20">
+        <div class="problem-tag-item">
+          <!-- 버튼 클릭시 추가 되고 -> 해당 버튼 클릭시 태그 삭제 됨 -->
+          <button>안푼문제</button>
+          <button>풀고 있는 문제</button>
+          <button>JAVA</button>
+          <button>JAVASCRIPT</button>
+          <button>LV.0</button>
+          <button>LV.1</button>
+        </div>
+        <div class="filter-group">
+          <button class="filter">필터 초기화</button>
+          <button class="filter">필터 검색</button>
+        </div>
       </div>
       <div class="problem-board-table mt40">
         <table>

@@ -32,33 +32,40 @@
   </div>
   <div class="container">
     <div class="main-content mt50">
-      <div class="chat-title">
-        <h4>채팅 검색</h4>
-        <div class="search-inp">
-          <input type="text" name="" id="" placeholder="채팅방 제목 또는 사용자를 검색해 주세요">
+      <div class="chat-title-nav">
+        <div class="chat-title clearfix">
+          <h4>채팅 검색</h4>
+          <div class="search-inp">
+            <input type="text" name="" id="" placeholder="채팅방 제목 또는 사용자를 검색해 주세요">
+          </div>
+          <hr class="dashed mt20 mb20">
+          <div class="chat-tag-wrap">
+            <h4>태그별 모아보기</h4>
+            <div class="chat-tag-title">
+              <button>자유주제</button>
+              <button>커리어고민</button>
+              <button>질문하기</button>
+              <button>문제질문</button>
+            </div>
+            <hr class="dashed mt20 mb20">
+            <div class="chat-tag-item">
+              <!-- 버튼 클릭시 추가 되고 -> 해당 버튼 클릭시 태그 삭제 됨 -->
+              <button>자유주제</button>
+              <!-- 
+                <button>커리어고민</button>
+                <button>질문하기</button>
+                <button>문제질문</button>
+              -->
+            </div>
+            <p></p>
+          </div>
+          <div class="filter-group">
+            <button class="filter">필터 초기화</button>
+            <button class="filter">필터 검색</button>
+          </div>
         </div>
       </div>
-      <hr class="dashed mt20 mb20">
-      <div class="chat-tag-wrap">
-        <h4>태그별 모아보기</h4>
-        <div class="chat-tag-title">
-          <button>자유주제</button>
-          <button>커리어고민</button>
-          <button>질문하기</button>
-          <button>문제질문</button>
-        </div>
-        <hr class="dashed mt20 mb20">
-        <div class="chat-tag-item">
-          <!-- 버튼 클릭시 추가 되고 -> 해당 버튼 클릭시 태그 삭제 됨 -->
-          <button>자유주제</button>
-          <!-- 
-            <button>커리어고민</button>
-            <button>질문하기</button>
-            <button>문제질문</button>
-          -->
-        </div>
-        <p></p>
-      </div>
+
       <div class="content-chat-wrap">
         <details open>
           <summary><i class="xi-forum-o"></i>컨텐츠 영역</summary>
@@ -83,10 +90,14 @@
           </div>
         </details>
       </div>
+
       <div class="content-chat-wrap">
         <details>
           <summary><i class="xi-speech-o"></i>유저 리스트 <span>{count}</span></summary>
           <div class="chat-list">
+            <div class="chat-list-head">
+              <button>유저 검색</button>
+            </div>
             <div class="chat-list-item">
               <img src="/img/test-profile/handyping.png" alt="이미지 등록 안했을 경우에 방장 이미지로" >
               <ol>

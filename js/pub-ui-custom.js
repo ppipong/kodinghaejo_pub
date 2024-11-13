@@ -131,6 +131,35 @@ function toggleTab() {
   }
 }
 
+/* 채팅 사이드바 /chatView  */
+function chatViewSideBar() {
+  const sideBtn = document.querySelectorAll('.chat-nav-side-btn');
+  const sideArea = document.querySelectorAll('.chat-nav-side');
+
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  
+  // 클라이언트 값 체크
+  document.getElementById('innerWidth').innerHTML = 'innerWidth(스크롤 포함 가로길이) : ' + window.innerWidth;
+  document.getElementById('innerHeight').innerHTML = 'innerHeight(스크롤 포함 세로길이) : ' + window.innerHeight;
+
+  if(sideArea) {
+    const newWidth = width * 0.4; 
+    console.log(newWidth);
+    sideArea.style.width = `calc(${newWidth}px)`;
+  }
+
+  chatViewSideBar();
+  window.addEventListener('resize', chatViewSideBar);
+  // 버튼 이벤트 잠시 홀드
+  // this.addEventListener('click', () => {
+  //   console.log(sideBtn);
+  //   console.log(sideArea);
+  //   sideArea.target.classList.toggle('active');
+  // });
+
+}
+
 document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-bookmark-o') || event.target.matches('.xi-bookmark')) {
     event.target.classList.toggle("xi-bookmark-o");
