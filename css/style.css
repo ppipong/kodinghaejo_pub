@@ -187,6 +187,30 @@ hr.dashed{
   border-color:#dee2e6;
 }
 details summary::marker{font-size:0;}
+/********** 유틸 페이지 **********/
+/* 딜레이 */
+.delay-filed {
+  position: fixed;
+  background: rgba(40, 56, 80, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.delay-filed .delay-icon {
+  color: #fff;
+  font-size: 40px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  margin: 0 auto;
+}
+.delay-filed .delay-icon i {
+  -webkit-animation: xi-spin 2s infinite linear;
+          animation: xi-spin 2s infinite linear;
+}
 /********** 모달 : modal **********/
 /* 모달 부분 분석 */
 .modal-background {
@@ -478,7 +502,15 @@ details summary::marker{font-size:0;}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 10px 0;
+}
+.content-board-question .question-title .question-box .question-item .item-tab button {
+  font-size: 15px;
+  border: 2px solid transparent;
+  border-radius: 0;
+}
+.content-board-question .question-title .question-box .question-item .item-tab button:hover {
+  border-bottom: 2px solid #333;
 }
 .content-board-question .question-body .question-table {
   border: 1px solid #ced4da;
@@ -487,12 +519,18 @@ details summary::marker{font-size:0;}
 .content-board-question .question-body .question-table .question-list {
   display: flex;
   justify-content: space-around;
+  gap: 1.5em;
+  align-items: center;
   padding: 20px;
   border-bottom: 1px dashed #ced4da;
+}
+.content-board-question .question-body .question-table .question-list:last-child {
+  border: none;
 }
 .content-board-question .question-body .question-table .question-list .answer {
   display: flex;
   width: 100px;
+  height: 100px;
   border: 1px solid #ced4da;
   border-radius: 5px;
   flex-direction: column;
@@ -507,14 +545,64 @@ details summary::marker{font-size:0;}
   font-weight: 500;
   font-size: 18px;
 }
+.content-board-question .question-body .question-table .question-list .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .content-board-question .question-body .question-table .question-list .content .challenge {
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
 }
-
-
+.content-board-question .question-body .question-table .question-list .content .info .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-board-question .question-body .question-table .question-list .content .info .info-item .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.content-board-question .question-body .question-table .question-list .content .info .info-item .user-profile img {
+  width: 35px; 
+  height: 35px; 
+  border-radius: 999px;
+  display: inline-block;
+}
+.content-board-question .question-body .question-table .question-list i.xi-new {
+  color: tomato;
+  margin: 0 4px;
+}
+.content-board-question .question-body .question-table .question-list .detail {
+  margin: 5px 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 .content-board-question .qusetion-pageing {
-  border: 1px solid rebeccapurple;
+  margin-top: 40px;
+}
+.content-board-question .qusetion-pageing .paginate a {
+  border: none;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 3px;
+  border: 1px solid #f7f7f7;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 3px 0px;
+}
+.content-board-question .qusetion-pageing .paginate a:hover {
+  background: #f9fdff;
+}
+.content-board-question .qusetion-pageing .paginate a.on {
+  border-radius: 10px;
+  color: #fff;
+  border: 1px solid transparent;
+  background: #333;
 }
 /* ********* rank : 랭킹 **********/
 .content-rank .content-rank-title {
