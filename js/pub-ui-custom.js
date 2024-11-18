@@ -50,7 +50,6 @@ fetch("/page-member/mypage.html")
     document.querySelector("#mypage_manu").innerHTML = data;
   });
 
-
 // 로그인 쪽 모달 -- 나중 처리 
 /* 
 const loginView = (e) => {
