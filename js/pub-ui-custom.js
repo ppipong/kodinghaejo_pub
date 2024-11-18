@@ -67,6 +67,11 @@ const loginView = (e) => {
 const loginChk = () => {};
 */
 
+/* 스크롤 최상단 이동 버튼 */
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 /* 공통 - 페이지 네이션 : on class 이펙트 */
 function pagenation() {
   const paginateContainers = document.querySelectorAll('.paginate');

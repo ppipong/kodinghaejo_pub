@@ -12,7 +12,7 @@
   <script src="/js/pub-ui-custom.js"></script>
 </head>
 
-<body style="overflow-x: hidden;">
+<body>
   <!-- header 영역 -->
   <div class="container" style="min-height: auto;">
     <div class="main-content">
@@ -74,7 +74,6 @@
         </div> <!-- chat-nav-side end-->
 
         <div class="chat-view-body">
-
           <div class="chat-start-message fadeInDown">
             <b>{user}</b> 님이 입장하였습니다
           </div>
@@ -100,11 +99,9 @@
             <b>{user}</b> 님이 나가셨습니다
           </div>
         </div> <!-- chat-view-body end-->
+        
         <div class="chat-send-message">
-          <div class="input-box-custom">
-          </div>
           <input type="text" placeholder="하위">
-          <!-- 버튼 커스텀 해야됨 -->
           <button class="" type="submit"><i class="xi-send"></i></button>
           <button class="" ><i class="xi-plus-circle"></i></button>
         </div>
@@ -114,6 +111,6 @@
   </div>
 </body>
 <script>
-  chatViewSideBar();
+  chatViewSideBar();  
 </script>
 </html>
