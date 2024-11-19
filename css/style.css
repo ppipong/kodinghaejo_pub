@@ -305,7 +305,6 @@ details summary::marker{font-size:0;}
 .pop-banner .pop-info {
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
   align-items: center;
   background: #000;
   color: #fff;
@@ -313,7 +312,12 @@ details summary::marker{font-size:0;}
 }
 .pop-banner .pop-info span {
   display: block;
-  border: 1px solid tomato;
+  cursor: pointer;
+}
+.pop-banner .pop-info .dontShow 
+.pop-banner .pop-info .dontShow 
+{
+  /* display: none; */
 }
 .top-overview {
   font-size: 0;
@@ -361,7 +365,6 @@ details summary::marker{font-size:0;}
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
-
 .modal-login .form-input {
 	width: 312px;
 	margin-bottom: 12px;
@@ -1113,8 +1116,35 @@ header {
   align-items: center;
   display: flex;
 }
-.main-navbar .main-navbar-list .main-list-item li a:hover {
-  font-weight: 400;
+.main-navbar .main-navbar-list .main-list-item .notice-pop {
+  color: tomato;
+  font-size: 20px;
+}
+.notice-pop-menu {
+  /* display: none; */
+  /* transition: all 0.2s; */
+  position: absolute;
+  right: calc((100% - 1175px) / 2);
+  z-index: 2;
+  top: 54px;
+  width: 400px;
+  max-height: 450px;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 10px;
+}
+.notice-pop-menu h4 {
+  padding: 20px 20px 0;
+}
+.notice-pop-menu ol {
+  padding: 20px 0 20px 35px;
+  margin: 0;
+}
+.notice-pop-menu ol li {
+  padding: 5px 0;
+}
+.notice-pop-menu ol li span {
+  margin-left: 10px;
 }
 /* 기본 default 값이 숨김 처리 */
 .main-nav-list-menu {
@@ -2081,7 +2111,7 @@ div[class*="-form"] {
   /* position: fixed; */
   padding: 20px;
   margin-right: 20px;
-  border: 1px solid#ced4da;
+  border: 1px solid #ced4da;
   border-radius: 10px;
 }
 .system-menu h4 {
@@ -2168,6 +2198,15 @@ a.btn_delete:hover {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+.sys-system_menu .sys-desc-guide {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.sys-system_menu .sys-desc-guide b {
+  color: #c82333;
 }
 .paginate {
   width: 100%;

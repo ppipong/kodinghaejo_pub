@@ -50,6 +50,58 @@ fetch("/page-member/mypage.html")
     document.querySelector("#mypage_manu").innerHTML = data;
   });
 
+// popbanner : 플로팅 팝업 배너 
+fetch("/include/popBanner.html")
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    document.querySelector("#pop_banner").innerHTML = data;
+  });
+
+/* 스크롤 최상단 이동 버튼 */
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* popbanner-close : pop-info x 버튼 이벤트 */
+function popCloseEvent() {
+  const closeBtn = document.querySelector('.xi-close');
+  const popBannerImg = document.querySelector('.banner-img');
+  
+  closeBtn.addEventListener('click', function() {
+    popBannerImg.style.display = 'none';
+    closeBtn.parentElement.style.display = 'none';
+  });
+}
+
+// 쿠키를 설정 함수 : setcookie_expires("쿠키명", "쿠키 값", 날짜일 수);
+function setcookie_expires(name, value, expiredays) {
+  let todayDate = new Date();
+  todayDate.setDate(todayDate.getDate() + expiredays); 
+  document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; expires=' + todayDate.toUTCString() + ';';
+}
+
+// 쿠키 값을 가져오는 함수
+function getCookie(name) {
+  let cookieArr = document.cookie.split(';');
+  for (let i = 0; i < cookieArr.length; i++) {
+      let cookiePair = cookieArr[i].split('=');
+      if (cookiePair[0].trim() === name) {
+          return decodeURIComponent(cookiePair[1]);
+      }
+  }
+  return null;
+}
+
+// popbanner-close : pop-info 하루만 안보기
+function dontShowAgain() {
+  setcookie_expires("myCookie", "true", 1); 
+  alert("광고를 하루 동안 보지 않습니다.");
+  document.querySelector('.banner-img').style.display = 'none';
+  document.querySelector('.pop-info').style.display = 'none';
+}
+
 // 로그인 쪽 모달 -- 나중 처리 
 /* 
 const loginView = (e) => {
@@ -66,11 +118,6 @@ const loginView = (e) => {
 }
 const loginChk = () => {};
 */
-
-/* 스크롤 최상단 이동 버튼 */
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
 
 /* 공통 - 페이지 네이션 : on class 이펙트 */
 function pagenation() {
@@ -164,5 +211,13 @@ document.addEventListener('click', function(event) {
   if (event.target.matches('.xi-heart-o') || event.target.matches('.xi-heart')) {
     event.target.classList.toggle("xi-heart-o");
     event.target.classList.toggle("xi-heart");
+  }
+});
+
+// 벨 변경 --> 함수랑 같이 묶어서 
+document.addEventListener('click', function(event) {
+  if (event.target.matches('.xi-bell-o') || event.target.matches('.xi-bell')) {
+    event.target.classList.toggle("xi-bell-o");
+    event.target.classList.toggle("xi-bell");
   }
 });
