@@ -22,6 +22,16 @@ fetch("/include/header.html")
       });
     }
     /* // header : 드롭다운 -- 타임리프 처리시 해더 영역에 복붙 */
+
+    // notice-pop 
+    document.querySelector(".notice-pop").addEventListener("click", function(event) {
+      if(event.target.closest(".notice-pop.on")) {
+        document.querySelector('.notice-pop-menu').style.display = "block";
+      } else if (event.target.closest(".notice-pop")) {
+        document.querySelector('.notice-pop-menu').style.display = "none";
+      }
+    });
+
   });
 
 fetch("/include/footer.html")
