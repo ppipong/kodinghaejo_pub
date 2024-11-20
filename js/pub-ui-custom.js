@@ -23,16 +23,15 @@ fetch("/include/header.html")
     }
     /* // header : 드롭다운 -- 타임리프 처리시 해더 영역에 복붙 */
 
-    // notice-pop 
     document.querySelector(".notice-pop").addEventListener("click", function(event) {
-      if(event.target.closest(".notice-pop.on")) {
-        document.querySelector('.notice-pop-menu').style.display = "block";
-      } else if (event.target.closest(".notice-pop")) {
-        document.querySelector('.notice-pop-menu').style.display = "none";
+      if (document.querySelector(".notice-pop-menu").style.display === "none" || document.querySelector(".notice-pop-menu").style.display === "") {
+        document.querySelector(".notice-pop-menu").style.display = "block";
+      } else {
+        document.querySelector(".notice-pop-menu").style.display = "none";
       }
     });
 
-  });
+  }); // then((data)
 
 fetch("/include/footer.html")
   .then((response) => {

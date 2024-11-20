@@ -460,6 +460,9 @@ details summary::marker{font-size:0;}
 .toastui-editor-tooltip .text {
   color: #fff;
 }
+.toastui-editor-main-container {
+  background: #fff;
+}
 /* ********* problemCollect : 코딩테스트 부분 **********/
 
 /* 리스트 박스 부분 */
@@ -1117,7 +1120,7 @@ header {
   display: flex;
 }
 .main-navbar .main-navbar-list .main-list-item .notice-pop {
-  color: tomato;
+  color: #333e46;
   font-size: 20px;
 }
 .notice-pop-menu {
@@ -2129,6 +2132,7 @@ div[class*="-form"] {
   margin-right: 20px;
   border: 1px solid #ced4da;
   border-radius: 10px;
+  background: #fff;
 }
 .system-menu h4 {
   padding-bottom: 15px;
@@ -2184,6 +2188,57 @@ div[class*="-form"] {
   display: flex;
   width: 100%;
   gap: 10px;
+}
+.info-chart-container {
+  display: flex;
+  flex-direction: column;
+}
+.info-box-container {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0 50px;
+  gap: 20px;
+}
+.info-box-container .info-box {
+  /* border: 1px solid tomato; */
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-width: 175px;
+  min-height: 175px;
+  background: #fff;
+}
+.info-box-container .info-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.info-box-container .info-box .sub-info-box {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.info-box-container .info-box .sub-info-box .daily-count {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+}
+/* TOAST UI Chart CSS */
+.chart-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-direction: column;
+}
+.bar-chart
+, .pie-chart 
+{
+  display: inline-block;
+  text-align: center;
+}
+.toastui-chart-wrapper canvas {
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .btn_search
 , a.btn_view 
