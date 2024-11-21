@@ -337,7 +337,70 @@ details summary::marker{font-size:0;}
   place-items: center;  /* 세로 및 가로 중앙 정렬 */
   height: inherit;
 }
-/********** 모달 : modal **********/
+/********** 로그인 회원가입 : login join **********/
+.container.login {
+  background: linear-gradient(90deg, rgba(95,127,255,1) 0%, rgba(46,76,200,1) 100%);
+}
+.container.login .intro-aset {
+  color: #fff;
+}
+.container.login .intro-aset img {
+  width : 400px;
+}
+.container.login .main-content {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+.container.login .content-login {
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container.login .content-login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container.login .content-login label {
+  font-weight: 400;
+}
+.login-email-form 
+, .login-password-form
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-login .login_btn {
+  width: 100%;
+  font-weight: 400;
+  padding: 12px 0;
+}
+.content-login .login_btn:hover {
+  background: #fafcff;
+}
+.content-login .info-login {
+  margin: 20px 0;
+}
+.content-login .sns-login h4 {
+  border-top: 1px solid #000;
+  padding: 10px 0;
+}
+.content-login .sns-login .sns-btn-group {
+  border: 1px solid tomato;
+}
+.content-login .sns-login .sns-btn-group button {
+  /* color: #fff; */
+  /* background: #000; */
+  font-size: 18px;
+}
+.content-login .sns-login .sns-btn-group .sns-btn-google {
+}
+.content-login .sns-login .sns-btn-group button:hover {
+  filter: brightness(0.95);
+}
+/********** 모달 : modal  -- 현재 사용 x **********/
 /* 모달 부분 분석 */
 .modal-background {
   display: none;
@@ -376,7 +439,6 @@ details summary::marker{font-size:0;}
 	border-radius: 4px;
 	background-color: #fff;
 }
-
 .modal-login .form-button {
 	background-color: black;
 	margin: 12px 0;
@@ -388,14 +450,12 @@ details summary::marker{font-size:0;}
 	font-size: 14px;
 	font-weight: bold;
 }
-
 .modal-login .modal-action {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 24px;
 }
-
 .modal-action .action-text {
 	line-height: 1.38;
 	font-size: 13px;
@@ -403,20 +463,17 @@ details summary::marker{font-size:0;}
 	border-bottom: 1px solid #858a8d;
 	cursor: pointer;
 }
-
 .modal-action .action-divider {
 	margin: 0 8px;
 	width: 1px;
 	height: 10px;
 	background-color: #858a8d;
 }
-
 .modal-login .social-login {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-
 .modal-login .social-login-line {
 	position: relative;
 	bottom: -8px;
@@ -427,7 +484,6 @@ details summary::marker{font-size:0;}
 	background-color: #f1f3f5;
 	border: none;
 }
-
 .modal-login .social-login-title {
 	padding: 0 8px;
 	margin-bottom: 16px;
@@ -438,13 +494,11 @@ details summary::marker{font-size:0;}
 	z-index: 1;
 	background-color: #fff;
 }
-
 .modal-login .social-buttons {
 	display: flex;
 	margin: auto;
 	column-gap: 12px;
 }
-
 .social-button {
 	display: flex;
 	justify-content: center;
@@ -1051,7 +1105,7 @@ details summary::marker{font-size:0;}
   display: flex;
   justify-content: space-between;
 }
-.wrap .challenge-content .bottom-list .testcase-button
+.wrap .challenge-content .bottom-list .testcase-button > a
 , .wrap .challenge-content .bottom-list .func-buttons .btn_check 
 , .wrap .challenge-content .bottom-list .func-buttons .btn_forward 
 , .wrap .challenge-content .bottom-list .func-buttons .btn_login 
@@ -1062,7 +1116,7 @@ details summary::marker{font-size:0;}
   border-radius: 5px;
   cursor: pointer;
 }
-.wrap .challenge-content .bottom-list .testcase-button:hover
+.wrap .challenge-content .bottom-list .testcase-button > a:hover
 , .wrap .challenge-content .bottom-list .func-buttons .btn_check:hover 
 , .wrap .challenge-content .bottom-list .func-buttons .btn_forward:hover 
 , .wrap .challenge-content .bottom-list .func-buttons .btn_login:hover 
@@ -1071,6 +1125,9 @@ details summary::marker{font-size:0;}
   background-color: #37485D;
   color: white;
   transition: .4s all;
+}
+.wrap .challenge-content .bottom-list .testcase-button > a {
+  display: inline-block;
 }
 /************************ header *************************/
 header {
