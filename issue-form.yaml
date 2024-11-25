@@ -29,7 +29,7 @@ body:
         - About Details
     validations:
       required: true
-
+  
   - type: textarea
     id: tasks
     attributes:
