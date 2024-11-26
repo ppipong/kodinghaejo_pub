@@ -1537,19 +1537,45 @@ div[class*="-form"] {
   cursor: pointer;
 }
 .main-content .content-box .box-item .item-middle-card .item-middle-ui-card-box .card-middle-ui-list img {
-  border-radius: 999px;
+  border-radius: 50%;
   border: 1px solid transparent;
   object-fit: cover;
-  width: 100%;
+  width: inherit;
   height: 100%;
 }
-.main-content .content-box .box-item .item-middle-card .item-middle-ui-card-box .card-middle-ui-list:hover {
-  background: #f2faff;
+/* 랭크 프로필 변경 : 241126 */
+.profile-img {
+  width: 100px;
+  height: 100px;
 }
-.main-content .content-box .box-item .item-middle-card .item-middle-ui-card-box .card-middle-ui-list img:hover {
+.rank-bronse
+, .rank-silver 
+, .rank-gold 
+{
+  width: 150px;
+  height: 150px;
+  /* position: absolute; */
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+.rank-bronse {
+  background-image: url('/img/rank-badge/Badge-Frame.png');
+}
+.rank-silver {
+  background-image: url('/img/rank-badge/Badge-Frame-1.png');
+}
+.rank-gold {
+  background-image: url('/img/rank-badge/Badge-Frame-3.png');
+}
+/* .main-content .content-box .box-item .item-middle-card .item-middle-ui-card-box .card-middle-ui-list:hover {
+  background: #f2faff;
+} */
+/* .main-content .content-box .box-item .item-middle-card .item-middle-ui-card-box .card-middle-ui-list img:hover {
   -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
+} */
 .main-content .content-box .box-item .item-middle-card .item-middle-ui-card-box .card-middle-ui-list .card-item {
   display: flex;
   flex-direction: column;
@@ -2454,25 +2480,3 @@ a.btn_delete:hover {
   }
 }
 
-/* 랭크 관련 테스트 */
-.rank-bronse {
-  width: 150px;
-  height: 100px;
-  background-image: url('/img/rank-badge/Badge-Frame.png');
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-}
-.rank-silver {
-  background-image: url('/img/rank-badge/Badge-Frame-1.png');
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
-}
-.rank-gold {
-  background-image: url('/img/rank-badge/Badge-Frame-3.png');
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
-}
