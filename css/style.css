@@ -1049,7 +1049,9 @@ details summary::marker{font-size:0;}
   border-radius: 5px;
   cursor: pointer;
 }
-.challenge-nav .nav-item .dropdown-language .dropdown-menu .dropdown-item:hover {
+.challenge-nav .nav-item .dropdown-language .dropdown-menu .dropdown-item:hover 
+,.challenge-nav .nav-item .dropdown-language .dropdown-menu .dropdown-item:active
+{
   background: #d0e1ff;
   color: #44576c;
   transition: .4s all;
