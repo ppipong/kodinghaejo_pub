@@ -111,23 +111,6 @@ function dontShowAgain() {
   document.querySelector('.pop-info').style.display = 'none';
 }
 
-// 로그인 쪽 모달 -- 나중 처리 
-/* 
-const loginView = (e) => {
-  alert(e);
-  const modalBackground = document.querySelector(".modal-background");
-  if (e == 'open') {
-    modalBackground.style.display = 'block';
-    alert(e);
-  }
-  if (e == 'close') {
-    modalBackground.style.display = 'none';
-    alert(e);
-  }
-}
-const loginChk = () => {};
-*/
-
 /* 공통 - 페이지 네이션 : on class 이펙트 */
 function pagenation() {
   const paginateContainers = document.querySelectorAll('.paginate');
